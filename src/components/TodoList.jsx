@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TodoList({ todoArr, CompleteTodo }) {
+export default function TodoList({ todoArr, CompleteTodo, DeleteTodo }) {
 	todoArr =
 		todoArr.length > 0
 			? todoArr
@@ -22,7 +22,11 @@ export default function TodoList({ todoArr, CompleteTodo }) {
 											el["done"] ? "green" : "blue"
 										}`}
 									/>
-									<i title="Delete" className="fas fa-trash-alt" />
+									<i
+										title="Delete"
+										onClick={() => DeleteTodo(i)}
+										className="fas fa-trash-alt"
+									/>
 								</div>
 							</li>
 					  ))

@@ -1,7 +1,7 @@
 .outer-box {
 	width: 500px;
 	margin: 2px auto;
-	border: 1px solid red;
+	border: 0px solid red;
 }
 
 .box {
@@ -53,7 +53,7 @@ button:focus {
 
 .todo-list {
 	max-height: 210px;
-	border: 2px solid green;
+	border: 0px solid green;
 	overflow-y: auto;
 }
 

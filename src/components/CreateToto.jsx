@@ -38,6 +38,11 @@ export default function CreateToto() {
 			swal("Good Job!", "Todo Complete", "Success");
 		}
 	};
+	const DeleteTodo = (i) => {
+		todos.splice(i, 1);
+		localStorage.setItem("todos", JSON.stringify(todos));
+		setTodoArr(todos);
+	};
 	return (
 		<>
 			<div className="box">
@@ -57,7 +62,11 @@ export default function CreateToto() {
 					</button>
 				</div>
 			</div>
-			<TodoList todoArr={todoArr} CompleteTodo={CompleteTodo} />
+			<TodoList
+				todoArr={todoArr}
+				CompleteTodo={CompleteTodo}
+				DeleteTodo={DeleteTodo}
+			/>
 		</>
 	);
 }
